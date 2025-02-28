@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="brand">MyApp</div>
+  <button class="burger-menu" (click)="toggleMenu()">☰</button>
+  
+  <div class="nav-items" [class.active]="menuOpen">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search...">
+      <button (click)="search()">Search</button>
+    </div>
+    
+    <a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active">Login</a>
+    <a *ngIf="isLoggedIn" routerLink="/logout" routerLinkActive="active">Logout</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

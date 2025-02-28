@@ -1,0 +1,30 @@
+<section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to MyApp</h1>
+      <p>Your journey starts here. Discover, connect, and explore with ease.</p>
+      <a routerLink="/contact" class="cta-btn">Get Started</a>
+    </div>
+  </section>
+  
+  <section class="features">
+    <div class="features-container">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-cards">
+        <div *ngFor="let feature of features" class="feature-card">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 MyApp. All rights reserved.</p>
+      <div class="footer-links">
+        <a routerLink="/about">About</a>
+        <a routerLink="/contact">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>

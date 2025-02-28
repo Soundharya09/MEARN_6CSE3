@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-items a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-items a:hover {
+    background-color: #555;
+  }
+  
+  .nav-items .active {
+    background-color: #4CAF50;
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .search-container input {
+    padding: 0.3rem;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+    
+    .nav-items {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .nav-items.active {
+      display: flex;
+    }
+  }
